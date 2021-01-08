@@ -1,8 +1,8 @@
 import Head from "next/head";
 import { useEffect, useState } from "react";
-import styles from "./index.module.scss";
+
 import jwt from "jsonwebtoken";
-import { setMaxListeners } from "process";
+import Link from "next/link";
 
 export default function Home() {
   const [username, setUsername] = useState<string>("");
@@ -35,6 +35,9 @@ export default function Home() {
 
   return (
     <div>
+      <Link href="/sahil/activities">
+        <a>surf</a>
+      </Link>
       <h1>{message}</h1>
       <form>
         <input
